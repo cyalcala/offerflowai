@@ -18,12 +18,17 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Premium Background Mesh Glows -->
+  <div class="mesh-glow glow-1"></div>
+  <div class="mesh-glow glow-2"></div>
+  <div class="mesh-glow glow-3"></div>
 
   <!-- ==========================================
        STICKY HEADER & NAVIGATION
@@ -328,11 +333,11 @@
       <div class="section-header">
         <span class="badge">Live Demo sequence</span>
         <h2>One offer. Seven short videos. One clearer client journey.</h2>
-        <p>Click on any step in the sequence below to load and play that asset inside the interactive smartphone player. Muted by default—click to unmute and experience the messaging strategy.</p>
+        <p>Swipe or tap the sequence steps below to instantly load and play each video. Tapping updates both the smartphone player and its strategic explanation box in real-time.</p>
       </div>
       
       <div class="theatre-container">
-        <!-- Left Side: Smartphone Player Mockup -->
+        <!-- 1. The Phone Mockup Player -->
         <div class="theatre-player-pane">
           <div class="phone-mockup">
             <div class="phone-speaker"></div>
@@ -363,27 +368,9 @@
             </div>
             <div class="phone-home-button"></div>
           </div>
-          
-          <!-- Active Video Info Detail Box -->
-          <div class="glass-card active-info-card">
-            <div class="info-header">
-              <span id="active-video-num" class="video-num">01</span>
-              <h3 id="active-video-title">Hook</h3>
-            </div>
-            <div class="info-body">
-              <div class="info-row">
-                <strong>Strategic Purpose:</strong>
-                <p id="active-video-purpose">Captures attention and introduces the core insight.</p>
-              </div>
-              <div class="info-row">
-                <strong>Where to Use:</strong>
-                <p id="active-video-use">LinkedIn post, Reel, ad opener, landing page top section.</p>
-              </div>
-            </div>
-          </div>
         </div>
         
-        <!-- Right Side: Sequence Playlist Tabs -->
+        <!-- 2. The Playlist Switcher Tabs (on mobile styled as horizontal scroll pills) -->
         <div class="theatre-playlist-pane">
           
           <!-- Tab 1: Hook -->
@@ -457,6 +444,24 @@
           </div>
 
         </div>
+
+        <!-- 3. Active Video Info Detail Box -->
+        <div class="glass-card active-info-card">
+          <div class="info-header">
+            <span id="active-video-num" class="video-num">01</span>
+            <h3 id="active-video-title">Hook</h3>
+          </div>
+          <div class="info-body">
+            <div class="info-row">
+              <strong>Strategic Purpose:</strong>
+              <p id="active-video-purpose">Captures attention and introduces the core insight.</p>
+            </div>
+            <div class="info-row">
+              <strong>Where to Use:</strong>
+              <p id="active-video-use">LinkedIn post, Reel, ad opener, landing page top section.</p>
+            </div>
+          </div>
+        </div>
       </div>
       
       <p class="demo-note"><strong>Note:</strong> These demo videos are sample assets. For client projects, the scripts, visuals, and messaging are customized around the client’s offer.</p>
@@ -474,42 +479,56 @@
         <p>A completely productized process designed for speed, clarity, and zero friction. Here is exactly what happens once you request a pack.</p>
       </div>
       
-      <div class="process-container">
+      <!-- Connective Glow Timeline container -->
+      <div class="process-timeline">
+        <div class="timeline-track"></div>
         
-        <div class="glass-card process-card">
-          <div class="process-step-num">01</div>
-          <h3>Offer Intake</h3>
-          <p>You submit your offer details, target audience, primary call-to-action (CTA), current content samples, and brand voice guidelines via a simple form.</p>
+        <div class="timeline-item">
+          <div class="timeline-node">01</div>
+          <div class="glass-card process-card">
+            <h3>Offer Intake</h3>
+            <p>You submit your offer details, target audience, primary call-to-action (CTA), current content samples, and brand voice guidelines via a simple form.</p>
+          </div>
         </div>
 
-        <div class="glass-card process-card">
-          <div class="process-step-num">02</div>
-          <h3>Angle Map</h3>
-          <p>I map your core offer into key structural communication angles: hooks, client pain points, desired transformation outcomes, objections, proof vectors, and conversion CTAs.</p>
+        <div class="timeline-item">
+          <div class="timeline-node">02</div>
+          <div class="glass-card process-card">
+            <h3>Angle Map</h3>
+            <p>I map your core offer into key structural communication angles: hooks, client pain points, desired transformation outcomes, objections, proof vectors, and conversion CTAs.</p>
+          </div>
         </div>
 
-        <div class="glass-card process-card">
-          <div class="process-step-num">03</div>
-          <h3>Script Pack</h3>
-          <p>I write 5 short, high-impact scripts designed specifically for positioning clarity, avoiding vague agency fluff and generic social media padding.</p>
+        <div class="timeline-item">
+          <div class="timeline-node">03</div>
+          <div class="glass-card process-card">
+            <h3>Script Pack</h3>
+            <p>I write 5 short, high-impact scripts designed specifically for positioning clarity, avoiding vague agency fluff and generic social media padding.</p>
+          </div>
         </div>
 
-        <div class="glass-card process-card">
-          <div class="process-step-num">04</div>
-          <h3>AI UGC Production</h3>
-          <p>I produce short AI-assisted UGC videos using premium visual presenters and layouts, based on the approved scripting mapping and voice references.</p>
+        <div class="timeline-item">
+          <div class="timeline-node">04</div>
+          <div class="glass-card process-card">
+            <h3>AI UGC Production</h3>
+            <p>I produce short AI-assisted UGC videos using premium visual presenters and layouts, based on the approved scripting mapping and voice references.</p>
+          </div>
         </div>
 
-        <div class="glass-card process-card">
-          <div class="process-step-num">05</div>
-          <h3>Posting Sequence</h3>
-          <p>You receive the final, high-definition videos along with a recommended tactical posting and testing sequence optimized for your target platforms.</p>
+        <div class="timeline-item">
+          <div class="timeline-node">05</div>
+          <div class="glass-card process-card">
+            <h3>Posting Sequence</h3>
+            <p>You receive the final, high-definition videos along with a recommended tactical posting and testing sequence optimized for your target platforms.</p>
+          </div>
         </div>
 
-        <div class="glass-card process-card">
-          <div class="process-step-num">06</div>
-          <h3>Optional Follow-Up Flow</h3>
-          <p>For businesses seeking the full conversion system, we connect these assets to dedicated landing pages, opt-in CTAs, email follow-up flows, or GoHighLevel automation rules.</p>
+        <div class="timeline-item">
+          <div class="timeline-node">06</div>
+          <div class="glass-card process-card">
+            <h3>Optional Follow-Up Flow</h3>
+            <p>For businesses seeking the full conversion system, we connect these assets to dedicated landing pages, opt-in CTAs, email follow-up flows, or GoHighLevel automation rules.</p>
+          </div>
         </div>
 
       </div>

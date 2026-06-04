@@ -171,6 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Add active class to clicked tab
       item.classList.add('active');
+
+      // Smoothly scroll the clicked tab to the center of the horizontal scroll track on mobile
+      if (window.innerWidth <= 768) {
+        item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
       
       // Fetch details from data attributes
       const videoSrc = item.getAttribute('data-video-src');
