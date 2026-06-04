@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>OfferFlow AI — AI UGC Demo Pack for Clearer Service Offers</title>
+  <meta name="description" content="Turn one service offer into short AI-assisted UGC videos that make your value easier to understand, easier to trust, and easier to act on before a sales call.">
+  <meta name="author" content="Cyrus Alcala">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://offerflowai.pages.dev">
+  <meta property="og:title" content="OfferFlow AI — AI UGC Demo Pack">
+  <meta property="og:description" content="Short AI-assisted UGC videos for clearer service offers, stronger trust, and smoother booked-call flow.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       STICKY HEADER & NAVIGATION
+       ========================================== -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--accent-blue-hover)">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+          <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        OfferFlow <span>AI</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#demo" class="nav-link">Demo</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#who-this-is-for" class="nav-link">For You?</a></li>
+          <li><a href="#package" class="nav-link">Package</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="btn btn-primary nav-btn">Get Demo Pack</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       1. HERO SECTION
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6" cy="6" r="4" fill="currentColor"/>
+          </svg>
+          Productized AI UGC for service offers
+        </span>
+        
+        <h1>Turn one service offer into short AI UGC videos that make your value easier to understand.</h1>
+        
+        <p class="lead">For coaches, consultants, agencies, freelancers, and service businesses that want clearer content, stronger trust, and a smoother path to booked calls.</p>
+        
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Get a Demo Pack</a>
+          <a href="#demo" class="btn btn-secondary">Watch the Demo Sequence</a>
+        </div>
+        
+        <div class="trust-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          No random content. No vague AI gimmicks. Just a clear video sequence built around your offer.
+        </div>
+      </div>
+      
+      <!-- Interactive Cascade Visual for 7 Video Campaign -->
+      <div class="hero-visual">
+        <div class="mockup-container">
+          <div class="mockup-card card-hook">
+            <span class="card-badge">01</span>
+            <h4>Hook</h4>
+          </div>
+          <div class="mockup-card card-problem">
+            <span class="card-badge">02</span>
+            <h4>Problem</h4>
+          </div>
+          <div class="mockup-card card-offer">
+            <span class="card-badge">03</span>
+            <h4>Offer</h4>
+          </div>
+          <div class="mockup-card card-objection">
+            <span class="card-badge">04</span>
+            <h4>Objection</h4>
+          </div>
+          <div class="mockup-card card-before-after">
+            <span class="card-badge">05</span>
+            <h4>Before/After</h4>
+          </div>
+          <div class="mockup-card card-angle-test">
+            <span class="card-badge">06</span>
+            <h4>Angle Test</h4>
+          </div>
+          <div class="mockup-card card-sample">
+            <span class="card-badge">07</span>
+            <h4>Sample Scenario</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. PROBLEM SECTION
+       ========================================== -->
+  <section class="section problem" id="problem">
+    <div class="container">
+      <div class="problem-layout">
+        <div class="problem-copy">
+          <span class="badge" style="background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.15); color: #f87171;">The Clarity Gap</span>
+          <h3>Your offer may be good. But if people do not understand it fast, they will not act.</h3>
+          <p>Most service businesses do not need more random content. They need clearer trust assets.</p>
+        </div>
+        
+        <div class="problem-bullets">
+          <div class="problem-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <div>
+              <h4>What Problem You Solve</h4>
+              <p>Directly target the root pain point stopping your client from reaching their goals.</p>
+            </div>
+          </div>
+          
+          <div class="problem-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <div>
+              <h4>Why Your Offer Matters</h4>
+              <p>Communicate the immediate value of your mechanics so they understand its importance.</p>
+            </div>
+          </div>
+
+          <div class="problem-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <div>
+              <h4>What Makes You Different</h4>
+              <p>Highlight your proprietary mechanism or simplified process over standard competitors.</p>
+            </div>
+          </div>
+
+          <div class="problem-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <div>
+              <h4>Addressing Objections Instantly</h4>
+              <p>Pre-empt concerns about bandwidth, timeline, technical overhead, and brand voice.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="problem-footer-line">
+          Attention is not enough. Your offer needs to become clear before the sales call.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. DEMO ROOM SECTION
+       ========================================== -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Live Demo Sequence</span>
+        <h2>One offer. Seven short videos. One clearer client journey.</h2>
+        <p>Browse the 7 core videos below to see the sequence layout in action. These demonstrate how we translate complex offerings into structured, bite-sized vertical visual assets.</p>
+      </div>
+      
+      <div class="demo-grid">
+        
+        <!-- Video 1: Hook -->
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <!-- EDIT VIDEO PATHS HERE: Replace "videos/1.mp4" with your final compressed MP4 files -->
+            <video src="videos/1.mp4" muted loop playsinline preload="metadata" controls></video>
+            <div class="video-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                <line x1="7" y1="2" x2="7" y2="22"/>
+                <line x1="17" y1="2" x2="17" y2="22"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <line x1="2" y1="7" x2="7" y2="7"/>
+                <line x1="2" y1="17" x2="7" y2="17"/>
+                <line x1="17" y1="17" x2="22" y2="17"/>
+                <line x1="17" y1="7" x2="22" y2="7"/>
+              </svg>
+              <div class="video-fallback-title">Video Demo 1</div>
+              <div class="video-fallback-desc">Hook video is ready to stream. Add compressed video file to videos/1.mp4</div>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Hook <span class="video-num">01</span></h3>
+            <div class="info-row"><strong>Purpose:</strong> <p>Captures attention and introduces the core insight.</p></div>
+            <div class="info-row"><strong>Use:</strong> <p>LinkedIn post, Reel, ad opener, landing page top section.</p></div>
+          </div>
+        </div>
+
+        <!-- Video 2: Problem -->
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <video src="videos/2.mp4" muted loop playsinline preload="metadata" controls></video>
+            <div class="video-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                <line x1="7" y1="2" x2="7" y2="22"/>
+                <line x1="17" y1="2" x2="17" y2="22"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <line x1="2" y1="7" x2="7" y2="7"/>
+                <line x1="2" y1="17" x2="7" y2="17"/>
+                <line x1="17" y1="17" x2="22" y2="17"/>
+                <line x1="17" y1="7" x2="22" y2="7"/>
+              </svg>
+              <div class="video-fallback-title">Video Demo 2</div>
+              <div class="video-fallback-desc">Problem video is ready to stream. Add compressed video file to videos/2.mp4</div>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Problem <span class="video-num">02</span></h3>
+            <div class="info-row"><strong>Purpose:</strong> <p>Names the clarity gap that stops people from acting.</p></div>
+            <div class="info-row"><strong>Use:</strong> <p>Awareness content, retargeting, educational posts.</p></div>
+          </div>
+        </div>
+
+        <!-- Video 3: Offer -->
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <video src="videos/3.mp4" muted loop playsinline preload="metadata" controls></video>
+            <div class="video-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                <line x1="7" y1="2" x2="7" y2="22"/>
+                <line x1="17" y1="2" x2="17" y2="22"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <line x1="2" y1="7" x2="7" y2="7"/>
+                <line x1="2" y1="17" x2="7" y2="17"/>
+                <line x1="17" y1="17" x2="22" y2="17"/>
+                <line x1="17" y1="7" x2="22" y2="7"/>
+              </svg>
+              <div class="video-fallback-title">Video Demo 3</div>
+              <div class="video-fallback-desc">Offer video is ready to stream. Add compressed video file to videos/3.mp4</div>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Offer <span class="video-num">03</span></h3>
+            <div class="info-row"><strong>Purpose:</strong> <p>Explains what the service does in simple language.</p></div>
+            <div class="info-row"><strong>Use:</strong> <p>Website, pinned post, sales page, DM follow-up.</p></div>
+          </div>
+        </div>
+
+        <!-- Video 4: Objection -->
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <video src="videos/4.mp4" muted loop playsinline preload="metadata" controls></video>
+            <div class="video-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                <line x1="7" y1="2" x2="7" y2="22"/>
+                <line x1="17" y1="2" x2="17" y2="22"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <line x1="2" y1="7" x2="7" y2="7"/>
+                <line x1="2" y1="17" x2="7" y2="17"/>
+                <line x1="17" y1="17" x2="22" y2="17"/>
+                <line x1="17" y1="7" x2="22" y2="7"/>
+              </svg>
+              <div class="video-fallback-title">Video Demo 4</div>
+              <div class="video-fallback-desc">Objection video is ready to stream. Add compressed video file to videos/4.mp4</div>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Objection <span class="video-num">04</span></h3>
+            <div class="info-row"><strong>Purpose:</strong> <p>Handles concerns about AI-assisted content and brand voice.</p></div>
+            <div class="info-row"><strong>Use:</strong> <p>FAQ content, retargeting, warm prospects.</p></div>
+          </div>
+        </div>
+
+        <!-- Video 5: Before/After -->
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <video src="videos/5.mp4" muted loop playsinline preload="metadata" controls></video>
+            <div class="video-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                <line x1="7" y1="2" x2="7" y2="22"/>
+                <line x1="17" y1="2" x2="17" y2="22"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <line x1="2" y1="7" x2="7" y2="7"/>
+                <line x1="2" y1="17" x2="7" y2="17"/>
+                <line x1="17" y1="17" x2="22" y2="17"/>
+                <line x1="17" y1="7" x2="22" y2="7"/>
+              </svg>
+              <div class="video-fallback-title">Video Demo 5</div>
+              <div class="video-fallback-desc">Before/After video is ready to stream. Add compressed video file to videos/5.mp4</div>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Before/After <span class="video-num">05</span></h3>
+            <div class="info-row"><strong>Purpose:</strong> <p>Shows the transformation from vague offer to clear outcome.</p></div>
+            <div class="info-row"><strong>Use:</strong> <p>LinkedIn post, landing page, pitch deck.</p></div>
+          </div>
+        </div>
+
+        <!-- Video 6: Angle Test -->
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <video src="videos/6.mp4" muted loop playsinline preload="metadata" controls></video>
+            <div class="video-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                <line x1="7" y1="2" x2="7" y2="22"/>
+                <line x1="17" y1="2" x2="17" y2="22"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <line x1="2" y1="7" x2="7" y2="7"/>
+                <line x1="2" y1="17" x2="7" y2="17"/>
+                <line x1="17" y1="17" x2="22" y2="17"/>
+                <line x1="17" y1="7" x2="22" y2="7"/>
+              </svg>
+              <div class="video-fallback-title">Video Demo 6</div>
+              <div class="video-fallback-desc">Angle Test video is ready to stream. Add compressed video file to videos/6.mp4</div>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Angle Test <span class="video-num">06</span></h3>
+            <div class="info-row"><strong>Purpose:</strong> <p>Shows how one offer can become multiple message angles.</p></div>
+            <div class="info-row"><strong>Use:</strong> <p>Ad testing, content planning, campaign strategy.</p></div>
+          </div>
+        </div>
+
+        <!-- Video 7: Sample Scenario -->
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <video src="videos/7.mp4" muted loop playsinline preload="metadata" controls></video>
+            <div class="video-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                <line x1="7" y1="2" x2="7" y2="22"/>
+                <line x1="17" y1="2" x2="17" y2="22"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <line x1="2" y1="7" x2="7" y2="7"/>
+                <line x1="2" y1="17" x2="7" y2="17"/>
+                <line x1="17" y1="17" x2="22" y2="17"/>
+                <line x1="17" y1="7" x2="22" y2="7"/>
+              </svg>
+              <div class="video-fallback-title">Video Demo 7</div>
+              <div class="video-fallback-desc">Sample Scenario video is ready to stream. Add compressed video file to videos/7.mp4</div>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Sample Scenario <span class="video-num">07</span></h3>
+            <div class="info-row"><strong>Purpose:</strong> <p>Shows how a fictional client scenario can become clearer through video.</p></div>
+            <div class="info-row"><strong>Use:</strong> <p>Demo asset, sales conversation, proposal support.</p></div>
+          </div>
+        </div>
+
+      </div>
+      
+      <p class="demo-note"><strong>Note:</strong> These demo videos are sample assets. For client projects, the scripts, visuals, and messaging are customized around the client’s offer.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. CLIENT JOURNEY SECTION
+       ========================================== -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">The Roadmap</span>
+        <h2>A simple journey from unclear offer to usable video system.</h2>
+        <p>A completely productized process designed for speed, clarity, and zero friction. Here is exactly what happens once you request a pack.</p>
+      </div>
+      
+      <div class="process-container">
+        
+        <div class="glass-card process-card">
+          <div class="process-step-num">01</div>
+          <h3>Offer Intake</h3>
+          <p>You submit your offer details, target audience, primary call-to-action (CTA), current content samples, and brand voice guidelines via a simple form.</p>
+        </div>
+
+        <div class="glass-card process-card">
+          <div class="process-step-num">02</div>
+          <h3>Angle Map</h3>
+          <p>I map your core offer into key structural communication angles: hooks, client pain points, desired transformation outcomes, objections, proof vectors, and conversion CTAs.</p>
+        </div>
+
+        <div class="glass-card process-card">
+          <div class="process-step-num">03</div>
+          <h3>Script Pack</h3>
+          <p>I write 5 short, high-impact scripts designed specifically for positioning clarity, avoiding vague agency fluff and generic social media padding.</p>
+        </div>
+
+        <div class="glass-card process-card">
+          <div class="process-step-num">04</div>
+          <h3>AI UGC Production</h3>
+          <p>I produce short AI-assisted UGC videos using premium visual presenters and layouts, based on the approved scripting mapping and voice references.</p>
+        </div>
+
+        <div class="glass-card process-card">
+          <div class="process-step-num">05</div>
+          <h3>Posting Sequence</h3>
+          <p>You receive the final, high-definition videos along with a recommended tactical posting and testing sequence optimized for your target platforms.</p>
+        </div>
+
+        <div class="glass-card process-card">
+          <div class="process-step-num">06</div>
+          <h3>Optional Follow-Up Flow</h3>
+          <p>For businesses seeking the full conversion system, we connect these assets to dedicated landing pages, opt-in CTAs, email follow-up flows, or GoHighLevel automation rules.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. WHO THIS IS FOR SECTION (Moved before Package for pre-qualification)
+       ========================================== -->
+  <section class="section" id="who-this-is-for">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Target Fit</span>
+        <h2>Is OfferFlow AI the right fit for your service?</h2>
+        <p>Let's skip the agency sales calls and align immediately. See if your current business situation matches our service profile.</p>
+      </div>
+      
+      <div class="qualification-grid">
+        
+        <!-- This is for you if -->
+        <div class="qualification-column is-for-you">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            This is for you if...
+          </h3>
+          <ul class="qualification-list">
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>You have a real service offer but struggle to explain it simply.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>You want high-quality short-form content assets without having to film yourself every single day.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Your social posts generate standard views and likes, but fail to convert into serious business conversations.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Your offer structure needs clearer hooks, structured objection-handling, and unified landing call-to-actions.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>You want trust-building assets to support direct sales conversations and follow-up loops rather than random posting.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- This is NOT for you if -->
+        <div class="qualification-column not-for-you">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+            This is not for you if...
+          </h3>
+          <ul class="qualification-list">
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              <span>You want fake client testimonials or inflated vanity metrics to shortcut trust.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              <span>You are looking for guaranteed revenue claims or overnight passive-income solutions.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              <span>You want to run low-effort mass spam content campaigns across networks.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              <span>You do not have a validated, operational service offer yet.</span>
+            </li>
+            <li class="qualification-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              <span>You are chasing short-term viral loops with no backend monetization strategy.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. PACKAGE SECTION (Entry Offer)
+       ========================================== -->
+  <section class="section pricing-section" id="package">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Productized Deliverables</span>
+        <h2>Transparent pricing. Clear expectations.</h2>
+        <p>No sales discovery calls. No customized agency markup. Just the exact assets you need to clarify your offer and build trust, delivered at a fixed price.</p>
+      </div>
+      
+      <div class="pricing-layout">
+        
+        <!-- The Entry Offer: AI UGC Demo Pack -->
+        <div class="glass-card package-card highlight">
+          <div class="package-header">
+            <span class="badge" style="background: rgba(37, 99, 235, 0.1); border-color: rgba(37, 99, 235, 0.2); color: var(--accent-blue-hover); margin-bottom: 8px;">ENTRY LEVEL</span>
+            <h3>AI UGC Demo Pack</h3>
+            <p class="sub">A low-risk way to test if your offer can become clearer through short-form AI-assisted video assets.</p>
+          </div>
+          
+          <div class="package-price">
+            <span class="price-tag">₱5,000–₱10,000</span>
+            <span class="currency">PHP</span>
+            <span style="color: var(--text-muted); margin: 0 8px;">/</span>
+            <span class="price-tag" style="font-size: 1.8rem; font-weight: 600;">$99–$199</span>
+            <span class="currency">USD</span>
+          </div>
+          
+          <div class="deliverables-title">What You Receive:</div>
+          <ul class="deliverables-list">
+            <li class="deliverable-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>5 short AI-assisted UGC videos</span>
+            </li>
+            <li class="deliverable-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>5 short, conversion scripts</span>
+            </li>
+            <li class="deliverable-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>5 social media captions</span>
+            </li>
+            <li class="deliverable-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>1 customized offer angle map</span>
+            </li>
+            <li class="deliverable-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>1 recommended posting sequence</span>
+            </li>
+            <li class="deliverable-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>1 structured revision round</span>
+            </li>
+          </ul>
+          
+          <a href="#contact" class="btn btn-primary" style="margin-top: auto;">Get a Demo Pack</a>
+          <p class="package-footer-note">Intro pricing is for early proof-of-concept clients and may change as the service develops.</p>
+        </div>
+        
+        <!-- Premium Path: OfferFlow System -->
+        <!-- ==========================================
+             7. PREMIUM PATH SECTION
+             ========================================== -->
+        <div class="glass-card premium-card">
+          <div class="premium-header">
+            <span class="badge" style="background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.2); color: var(--accent-cyan);">FULL CONVERSION LAYER</span>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+              OfferFlow System
+            </h3>
+            <p>Ready to go beyond raw video files and establish a systematic conversion funnel that runs on autopilot?</p>
+          </div>
+          
+          <div class="premium-positioning">
+            AI UGC gets attention. The follow-up system turns attention into a clearer path toward booked calls.
+          </div>
+          
+          <div class="deliverables-title" style="border-color: rgba(6, 182, 212, 0.15)">System Scope Includes:</div>
+          <ul class="premium-list">
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>15–30 short AI-assisted UGC videos</span>
+            </li>
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>1-on-1 strategic offer clarity session</span>
+            </li>
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Deep-dive hook & objection map</span>
+            </li>
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>High-converting landing page / lead magnet design</span>
+            </li>
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Optimized booking page CTAs</span>
+            </li>
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Automated email & DM follow-up sequences</span>
+            </li>
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>GoHighLevel flow automation setup</span>
+            </li>
+            <li class="premium-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Comprehensive performance overview</span>
+            </li>
+          </ul>
+          
+          <a href="#contact" class="btn btn-secondary">Ask about the full system</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. FAQ SECTION
+       ========================================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Clarifications</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Transparent answers to common questions about the productized workflow, video assets, and delivery.</p>
+      </div>
+      
+      <div class="faq-container">
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Is this fully AI-generated?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The videos are AI-assisted, but the strategy, scripts, positioning, captions, and offer angle map are created around your actual business. The goal is not random AI output. The goal is clearer communication.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I use these on LinkedIn, TikTok, Reels, or YouTube Shorts?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. The videos are designed as short vertical assets that can be used across short-form platforms.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you write the scripts?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. The Demo Pack includes scripts, captions, and an offer angle map.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can this use my face or brand?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The first version can use professional AI-assisted presenters or brand-style visuals. If you want content based on your own face, brand assets, or specific footage, that can be discussed separately.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is this a replacement for my personal content?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. This works best as a support system. It helps clarify your offer, test angles, and create trust-building assets. Your personal voice and real expertise still matter.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you guarantee booked calls?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. I do not guarantee sales or booked calls. The goal is to create clearer trust-building assets that support your sales process.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What do I need to provide?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Your offer, target audience, main CTA, common objections, brand references, and any examples of content you like.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How fast can this be delivered?
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>For early demo clients, delivery can be discussed based on scope and revisions.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. FINAL CTA SECTION
+       ========================================== -->
+  <!-- 
+    CTA CUSTOMIZATION REFERENCE:
+    To transition from simple mailto/LinkedIn DMs to an embed or scheduling page:
+    1. For Calendly/GHL Embeds: Replace this entire card inner block or the ".contact-ctas" div with your Calendly/GHL script widget.
+    2. For GHL/Tally Form: Add the HTML code snippet for GHL inline form here, or swap a CTA link to target a Tally URL.
+  -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="glass-card contact-card">
+        <h2>Want your offer turned into a short video sequence?</h2>
+        <p>Send your offer. I’ll map it into hooks, objections, scripts, captions, and a short AI-assisted video sequence designed to make your value easier to understand.</p>
+        
+        <div class="contact-ctas">
+          <!-- Button triggers mailto with prefilled values (see script.js for handler override) -->
+          <a href="mailto:cyrusalcala.agency@gmail.com?subject=OfferFlow%20AI%20Demo%20Pack%20Inquiry" class="btn btn-primary" id="btn-email-inquiry">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Email Cyrus
+          </a>
+          
+          <!-- Edit your LinkedIn profile URL easily. Current Placeholder: https://www.linkedin.com/in/cyrusalcala/ -->
+          <a href="https://www.linkedin.com/in/cyrusalcala/" target="_blank" rel="noopener" class="btn btn-secondary" id="btn-linkedin-dm">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            DM "UGC" on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10. FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>OfferFlow AI</h4>
+          <p>AI-assisted video assets for clearer service offers. Built with productized-service principles.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-col">
+            <h5>Direct Inquiries</h5>
+            <ul>
+              <!-- Easy editing of links. Place correct links or forms here -->
+              <li><a href="mailto:cyrusalcala.agency@gmail.com?subject=OfferFlow%20AI%20Demo%20Pack%20Inquiry">Email Cyrus</a></li>
+              <li><a href="https://www.linkedin.com/in/cyrusalcala/" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#demo">Demo Sequence</a></li>
+              <li><a href="#process">Journey Steps</a></li>
+              <li><a href="#who-this-is-for">Target Fit</a></li>
+              <li><a href="#package">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 OfferFlow AI. Created by Cyrus Alcala. All rights reserved.</p>
+        <a href="#home" class="back-to-top">
+          Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"/>
+            <polyline points="5 12 12 5 19 12"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
