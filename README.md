@@ -92,23 +92,27 @@ Ensure you have initialized git and linked your remote repository.
 
 ---
 
-## ☁️ Deploying to Cloudflare Pages
+## ☁️ Deploying to Cloudflare Pages via Wrangler CLI
 
-Cloudflare Pages makes deployment fast and free, integrating directly with your GitHub repository to auto-deploy on every push.
+Wrangler is Cloudflare's command-line tool. You can deploy your static files directly from the terminal.
 
-### Deployment Setup Steps:
-1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/).
-2. Navigate to **Workers & Pages** -> **Create application** -> **Pages** -> **Connect to Git**.
-3. Select your repository: `cyalcala/offerflowai`.
-4. Configure your Build settings:
-   * **Project name**: `offerflowai`
-   * **Production branch**: `main`
-   * **Framework preset**: `None`
-   * **Build command**: *Leave blank*
-   * **Build output directory**: `/` (meaning the root of the project)
-5. Click **Save and Deploy**.
+### Deployment Steps:
 
-Cloudflare will deploy your site and provide your production URL: **`https://offerflowai.pages.dev`**.
+1. **Authenticate Wrangler**:
+   Log in to your Cloudflare account from the CLI:
+   ```bash
+   npx wrangler login
+   ```
+
+2. **Deploy to Pages**:
+   Run the following deployment command from the root of the project:
+   ```bash
+   npx wrangler pages deploy . --project-name=offerflowai --branch=main
+   ```
+   *If the project `offerflowai` does not exist in your account yet, Wrangler will ask to create it for you. Select **Yes**.*
+
+3. **Verify Deployment**:
+   Wrangler will upload your assets and output your live production URL: **`https://offerflowai.pages.dev`**.
 
 ---
 
