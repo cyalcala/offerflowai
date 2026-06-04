@@ -114,71 +114,147 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // SMART VIEWPORT VIDEO AUTOPLAY/PAUSE
+  // PREMIUM DYNAMIC THEATRE PLAYER & AUDIO SYNCHRONIZATION
   // ==========================================
-  const videos = document.querySelectorAll('.video-card video');
-  
-  if ('IntersectionObserver' in window) {
-    const videoObserverOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5 // Trigger play when 50% of the video card is visible
-    };
+  const theatreVideo = document.getElementById('theatre-video');
+  const playlistItems = document.querySelectorAll('.playlist-item');
+  const activeNum = document.getElementById('active-video-num');
+  const activeTitle = document.getElementById('active-video-title');
+  const activePurpose = document.getElementById('active-video-purpose');
+  const activeUse = document.getElementById('active-video-use');
+  const unmuteBtn = document.getElementById('theatre-unmute-btn');
+  const videoFallback = document.getElementById('theatre-video-fallback');
 
-    const videoObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const video = entry.target;
-        
-        if (entry.isIntersecting) {
-          // Play the video when in view
-          video.play().catch(error => {
-            // Muted video autoplay is allowed in almost all browsers,
-            // but we catch and log failures to prevent console noise.
-            console.log('Autoplay deferred until user interaction:', error);
-          });
-        } else {
-          // Pause the video when out of view to preserve resources
-          video.pause();
-        }
-      });
-    }, videoObserverOptions);
+  let userMutedState = true; // By default, browser autoplay requires muted state.
 
-    videos.forEach(video => {
-      videoObserver.observe(video);
-    });
-  } else {
-    // Fallback for older browsers: Keep controls visible and don't autoplay
-    videos.forEach(video => {
-      video.removeAttribute('autoplay');
+  // Handle Unmute Button click
+  if (unmuteBtn && theatreVideo) {
+    unmuteBtn.addEventListener('click', () => {
+      // Toggle muted status
+      userMutedState = !userMutedState;
+      theatreVideo.muted = userMutedState;
+      
+      // Update UI button representation
+      updateUnmuteButtonUI();
     });
   }
 
-  // ==========================================
-  // GRACEFUL VIDEO FILE FALLBACK
-  // ==========================================
-  // Detects if local video files fail to load (e.g. missing files, 404, format issues)
-  // and turns on the fallback poster visualization in CSS.
-  videos.forEach(video => {
-    const wrapper = video.parentElement;
-    
-    // Triggered if the video src fails to load or 404s
-    video.addEventListener('error', () => {
-      wrapper.classList.add('video-load-error');
-      console.warn(`Video file failed to load: ${video.getAttribute('src')}`);
-    });
-    
-    // Optional timeout fallback: if video metadata doesn't load within 5 seconds,
-    // show the fallback to ensure the site looks premium.
-    const checkTimeout = setTimeout(() => {
-      if (video.readyState === 0) { // HAVE_NOTHING
-        wrapper.classList.add('video-load-error');
+  function updateUnmuteButtonUI() {
+    if (!unmuteBtn) return;
+    if (userMutedState) {
+      unmuteBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        Tap to Unmute
+      `;
+      unmuteBtn.classList.remove('unmuted');
+    } else {
+      unmuteBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <line x1="23" y1="9" x2="17" y2="15" stroke-width="2"/>
+          <line x1="17" y1="9" x2="23" y2="15" stroke-width="2"/>
+        </svg>
+        Mute Audio
+      `;
+      unmuteBtn.classList.add('unmuted');
+    }
+  }
+
+  // Handle click on playlist items
+  playlistItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove active class from all tabs
+      playlistItems.forEach(tab => tab.classList.remove('active'));
+      
+      // Add active class to clicked tab
+      item.classList.add('active');
+      
+      // Fetch details from data attributes
+      const videoSrc = item.getAttribute('data-video-src');
+      const title = item.getAttribute('data-title');
+      const purpose = item.getAttribute('data-purpose');
+      const use = item.getAttribute('data-use');
+      const index = item.getAttribute('data-video-index');
+
+      // Update main detail panel info
+      if (activeNum) activeNum.textContent = index.padStart(2, '0');
+      if (activeTitle) activeTitle.textContent = title;
+      if (activePurpose) activePurpose.textContent = purpose;
+      if (activeUse) activeUse.textContent = use;
+
+      // Update video player source & play it
+      if (theatreVideo) {
+        // Reset any load error fallback styling
+        const phoneScreen = theatreVideo.parentElement;
+        if (phoneScreen) phoneScreen.classList.remove('video-load-error');
+        if (videoFallback) videoFallback.style.display = 'none';
+
+        theatreVideo.src = videoSrc;
+        theatreVideo.muted = userMutedState; // Maintain current user muted state
+        theatreVideo.load();
+        
+        theatreVideo.play().catch(error => {
+          console.log('Play initiated but deferred by browser settings:', error);
+        });
       }
-    }, 5000);
-    
-    video.addEventListener('loadedmetadata', () => {
-      clearTimeout(checkTimeout);
     });
   });
+
+  // viewport aware play/pause control on the main single theatre video player
+  if ('IntersectionObserver' in window && theatreVideo) {
+    const theatreObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          theatreVideo.play().catch(err => {
+            console.log('Play deferred until user action:', err);
+          });
+        } else {
+          theatreVideo.pause();
+        }
+      });
+    }, { threshold: 0.3 }); // Play when at least 30% of the player is visible
+    
+    theatreObserver.observe(theatreVideo.parentElement.parentElement); // Observe phone mockup
+  }
+
+  // Graceful video load error indicator inside phone mockup screen
+  if (theatreVideo) {
+    theatreVideo.addEventListener('error', () => {
+      const phoneScreen = theatreVideo.parentElement;
+      if (phoneScreen) phoneScreen.classList.add('video-load-error');
+      if (videoFallback) {
+        // Update error message dynamically depending on file path
+        const currentSrc = theatreVideo.getAttribute('src');
+        const fallbackTitle = videoFallback.querySelector('.video-fallback-title');
+        const fallbackDesc = videoFallback.querySelector('.video-fallback-desc');
+        
+        if (fallbackTitle) fallbackTitle.textContent = `Video Load Failure`;
+        if (fallbackDesc) fallbackDesc.textContent = `File "${currentSrc}" could not be streamed. Please double check that you placed compressed files inside the videos/ folder.`;
+        
+        videoFallback.style.display = 'flex';
+      }
+    });
+    
+    // Fallback error timeout
+    let checkMetadataTimeout;
+    theatreVideo.addEventListener('loadstart', () => {
+      clearTimeout(checkMetadataTimeout);
+      checkMetadataTimeout = setTimeout(() => {
+        if (theatreVideo.readyState === 0) { // HAVE_NOTHING
+          const phoneScreen = theatreVideo.parentElement;
+          if (phoneScreen) phoneScreen.classList.add('video-load-error');
+          if (videoFallback) videoFallback.style.display = 'flex';
+        }
+      }, 6000);
+    });
+
+    theatreVideo.addEventListener('loadedmetadata', () => {
+      clearTimeout(checkMetadataTimeout);
+    });
+  }
 
   // ==========================================
   // INQUIRY PRE-FILLING UTILITY
